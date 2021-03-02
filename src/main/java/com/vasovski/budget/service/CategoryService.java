@@ -2,11 +2,15 @@ package com.vasovski.budget.service;
 
 import com.vasovski.budget.model.Category;
 
+import java.util.List;
+
 public interface CategoryService {
 
-    public Category create(Category category);
+    Category create(Category category);
 
-    public Category get(Long id);
+    Category get(Long id);
 
-    public void delete(Long id);
+    List<Category> getAll();
+
+    void delete(Long id);
 }

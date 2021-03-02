@@ -6,6 +6,7 @@ import com.vasovski.budget.service.CategoryService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 
 @Service
@@ -22,6 +23,11 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public Category get(Long id) {
         return categoryRepository.findById(id).orElseThrow(NoSuchElementException::new);
+    }
+
+    @Override
+    public List<Category> getAll() {
+        return categoryRepository.findAll();
     }
 
     @Override

@@ -7,6 +7,8 @@ import com.vasovski.budget.service.CategoryService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/category")
 @AllArgsConstructor
@@ -22,6 +24,11 @@ public class CategoryController {
     @GetMapping("/{id}")
     public Category get(@PathVariable Long id){
         return categoryService.get(id);
+    }
+
+    @GetMapping()
+    public List<Category> getAll(){
+        return categoryService.getAll();
     }
 
     @DeleteMapping("/{id}")
