@@ -16,6 +16,11 @@ import java.util.List;
 @Entity
 public class Budget {
 
+    public Budget(LocalDate date, Integer balance){
+        this.date = date;
+        this.balance = balance;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

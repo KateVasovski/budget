@@ -1,0 +1,17 @@
+1. Create page for create\update\delete categories with 2 field - name & parent category
+2. allow to choose start of budget period? Not only 1st day of month
+3. Charts for budget period and categories
+4. tests:
+    a. create expense - check budget for month
+    b. update expense+
+    c. update expense-
+    d. update expense category
+
+
+
+Тинькоф
+1.Выгрузка с последней траты по сегодняшную дату
+2 возможность исключить трату
+3 автосум на переводы
+4 к моим переводам богдану надо выводить сообщение и давать выбрать категорию
+5 маппинг основных магазинов и категорий

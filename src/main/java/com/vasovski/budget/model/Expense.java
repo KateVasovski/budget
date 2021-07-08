@@ -31,4 +31,6 @@ public class Expense {
     @JsonIgnore
     private Budget budget;
 
+    @Transient
+    private boolean isNew;
 }

@@ -7,6 +7,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @RestController
 @RequestMapping("/budget")
@@ -19,4 +20,14 @@ public class BudgetController {
     public Budget getDayBudget(@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate day){
         return budgetService.getDayBudget(day);
     }
+
+    @GetMapping("/month")
+    public List<Budget> getMonthBudget(@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate day){
+        return budgetService.getMonthBudget(day);
+    }
+
+//    @PostMapping()
+//    public Budget save(@RequestBody Budget budget){
+//        return budgetService.save(budget);
+//    }
 }

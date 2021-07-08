@@ -26,4 +26,7 @@ public class Category {
     @OneToMany(mappedBy = "category")
     @JsonIgnore
     private List<Expense> expenses;
+
+    @Transient
+    private Category parent;
 }
